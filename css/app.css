@@ -8,6 +8,10 @@
         "footer footer footer footer"
 }
 
+img {
+    width: 100%;
+}
+
 .header {
     grid-column-start: span 4;
     grid-row-start: 1;
