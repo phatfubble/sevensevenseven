@@ -1,40 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
 .container {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
         "header header header header"
-        "main main . sidebar"
+        "hero hero hero hero"
+        "main main main main"
+        "itinery itinery itinery itinery"
         "footer footer footer footer"
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    background-color: orchid;
+}
+
+.hero {
+    grid-area: hero;
+    background-size: cover;
+    background: url(../images/runner5.jpeg) center center;
+    height: 500px;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "call-out"
+}
+
+.itinery {
+    grid-area: itinery;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    "itinery-item"
+    "itinery-item"
+}
+
+.itinery-item {
+    display: itinery-item;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.itinery-item-img-left {
+    grid-template-columns: 50% 50%;
+    text-align: left;
+    background-color: whitesmoke;
+}
+.itinery-item-img-right {
+    grid-template-columns: 50% 50%;
+    text-align: right;
+    background-color: white;
+}
+
+.img-triangle {
+    background-size: cover;
+}
+
+.img-tri-left {
+    background-image: url(../images/tri-left-wide.png)
+}
+
+.img-tri-right {
+    background-image: url(../images/tri-right-wide.png)
+}
+
+
+.itinery-details {
+    padding: 10% 5%;
+    text-align: left;
+}
+
+.brand-strip {
+    background: rgb(80,181,211);
+    background: linear-gradient(90deg, rgba(80,181,211,1) 10%, rgba(229,234,0,1) 100%);
+}
+
+.brand-strip-top {
+    grid-area: brand-strip-top;
+
+}
+.brand-strip-bottom {
+    grid-area: brand-strip-bottom;
+}
+
+.call-out {
+    grid-area: call-out;
+    padding: 40px;
+    background: rgb(80,181,211);
+    background: linear-gradient(90deg, rgba(80,181,211,1) 10%, rgba(229,234,0,1) 100%);
+}
+.call-out h1,
+.call-out h4 {
+    color: white;
+}
+
+.bg-blue {
+    background-color: #50b5d3; /* 777 Blue */
 }
 
 img {
     width: 100%;
 }
 
-.header {
-    grid-column-start: span 4;
-    grid-row-start: 1;
+h1, h2, h3, h4, h5, h6, p, a, ul, ol {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+h2, h3, h5 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+footer {
+    grid-area: footer;
     text-align: center;
-    padding: 2rem;
-}
-
-
-.main {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    background-color: green;
-}
-
-.sidebar {
-    grid-column-start: 4;
-    grid-row-start: 2;
-    background-color: blue;
-}
-
-.footer {
-    grid-column-start: span 4;
-    grid-row-start: 4;
-    background-color: orange;
+    background-color: grey;
 }
