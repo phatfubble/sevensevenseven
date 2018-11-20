@@ -18,13 +18,23 @@ body {
 .header {
     grid-area: header;
     text-align: center;
-    background-color: orchid;
+    padding: 40px 20px;
+}
+
+.header h4 {
+    margin: 0;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
 }
 
 .hero {
     grid-area: hero;
     background-size: cover;
-    background: url(../images/runner5.jpeg) center center;
+    background-image: url(../images/denmark_1.jpg);
     height: 500px;
 }
 
